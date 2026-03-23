@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Showcase — Sourav Chakraborty</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      height: 200vh;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-bg,
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      will-change: transform, opacity;
+    }
+
+    /* Static background */
+    .hero-bg {
+      background-image: url("images/page with bg.png");
+      z-index: 1;
+    }
+
+    /* Overlay PNG */
+    .hero-overlay {
+      background-image: url("images/PAGE.png");
+      z-index: 2;
+      pointer-events: none;
+
+      /* VERY subtle intro start */
+      transform: translateY(10px);
+      opacity: 0;
+
+      transition:
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.9s ease-out;
+    }
+
+
+    /* Intro animation trigger */
+    .hero-overlay.intro {
+      animation: slideIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 3rem;
+      /* Increase top padding */
+      display: flex;
+      /* Flexbox for layout */
+      justify-content: flex-start;
+      /* Align left */
+      padding-left: 12%;
+      /* Move to the circled area */
+      gap: 3rem;
+      /* Space between buttons */
+      z-index: 10;
+    }
+
+    @font-face {
+      font-family: 'HelveticaBold';
+      src: url('fonts/Helvetica-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      font-size: 0.81rem;
+      /* Decreased by another 10% */
+      color: #ffe600;
+      /* Yellow color */
+      font-family: 'HelveticaBold', sans-serif;
+      /* Updated font */
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 1px;
+      opacity: 0;
+      animation: navFadeIn 1s 1s forwards;
+      /* Fade in after overlay starts */
+    }
+
+    @keyframes navFadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay" id="overlay"></div>
+
+    <nav class="nav">
+      <button class="nav-btn">Home</button>
+      <button class="nav-btn">Archive</button>
+      <button class="nav-btn">Shop</button>
+    </nav>
+  </div>
+
+  <script>
+    const overlay = document.getElementById("overlay");
+    const bg = document.querySelector(".hero-bg");
+
+    // Initial styles applied via JS
+    overlay.style.backgroundImage = 'url("images/PAGE.png")';
+    overlay.style.zIndex = "2";
+    overlay.style.pointerEvents = "none";
+
+    // Intro start state
+    overlay.style.transform = "translateY(10px)";
+    overlay.style.opacity = "0";
+
+    // Transition settings
+    overlay.style.transition = "transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.9s ease-out";
+
+    /* Trigger intro animation on load */
+    window.addEventListener("load", () => {
+      // Trigger transition to visible state
+      overlay.style.transform = "translateY(0)";
+      overlay.style.opacity = "1";
+    });
+
+    /* Scroll animation */
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      bg.style.transform = `translateY(${scrollY * 0.2}px)`;
+
+      overlay.style.transform = `
+        translateY(${scrollY * 0.35}px)
+      `;
+      overlay.style.opacity = Math.max(0, 1 - scrollY / 600);
+    });
+  </script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</body>
+
+</html>

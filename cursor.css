@@ -1,0 +1,46 @@
+/* --- CUSTOM CURSOR STYLES --- */
+
+body {
+    cursor: none;
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #ff6b35;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #ff6b35;
+    background: rgba(255, 107, 53, 0.08);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0.6;
+    transition:
+        width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        background 0.25s,
+        opacity 0.25s;
+}
+
+/* Hover expansion */
+body.hovering .cursor-outline {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 107, 53, 0.2);
+    opacity: 0.8;
+    border-color: transparent;
+}
