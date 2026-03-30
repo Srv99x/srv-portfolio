@@ -753,10 +753,11 @@
 
         @media (max-width: 600px) {
             .hero-section::before {
-                width: min(80vw, 450px);
+                opacity: 0.75;
+                width: min(85vw, 400px);
                 left: 50%;
                 transform: translateX(-50%);
-                opacity: 0.3;
+                mix-blend-mode: normal;
             }
 
             .hero-text h1 {
@@ -823,7 +824,8 @@
             font-family: 'TTCommonsLocal', sans-serif;
         }
 
-        /* --- TOOLS SECTION --- */
+        
+/* --- TOOLS SECTION --- */
         .tools-section {
             max-width: 1400px;
             margin: 6rem auto;
