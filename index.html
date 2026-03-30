@@ -1504,6 +1504,159 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* ============================================================
+           COMPREHENSIVE MOBILE STYLES — max-width: 768px
+           All fixes requested. Desktop styles are fully preserved.
+        ============================================================ */
+        @media (max-width: 768px) {
+
+            /* 1. ── HERO SECTION ───────────────────────────────────── */
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .hero-text h1 {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+            }
+
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 100%;
+                margin: 2rem auto;
+            }
+
+            .hero-right {
+                width: 100%;
+                padding: 1rem;
+                max-width: 100%;
+            }
+
+            /* 2. ── ABOUT SECTION ──────────────────────────────────── */
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .about-divider {
+                display: none;
+            }
+
+            .about-description {
+                text-align: left;
+                margin-left: 0;
+                max-width: 100%;
+            }
+
+            .about-title {
+                font-size: 2.5rem;
+            }
+
+            /* 3. ── PROFILE ABOUT SECTION ──────────────────────────── */
+            .profile-about-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            /* Order: left details → image → right details */
+            .about-details:first-child {
+                order: 1;
+            }
+
+            .profile-image-container {
+                order: 2;
+                max-width: 90vw;
+                margin: 0 auto;
+            }
+
+            .about-right {
+                order: 3;
+                text-align: left;
+            }
+
+            /* 4. ── TOOLS SECTION ──────────────────────────────────── */
+            .tools-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .tools-right {
+                padding-left: 0;
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding-top: 1.5rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+            }
+
+            /* 5. ── CATEGORIES SECTION ─────────────────────────────── */
+            .categories-section {
+                grid-template-columns: 1fr;
+                grid-template-rows: none;
+                height: auto;
+            }
+
+            .category-card {
+                min-height: 250px;
+            }
+
+            /* 6. ── FOOTER ─────────────────────────────────────────── */
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            .footer-column {
+                align-items: center;
+            }
+
+            .footer-name {
+                font-size: clamp(3rem, 12vw, 6rem);
+                text-align: center;
+            }
+
+            /* 7. ── NAV ────────────────────────────────────────────── */
+            .nav-links {
+                display: none;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            /* 8. ── GLASS CONNECT BUTTON ───────────────────────────── */
+            #glass-button-container {
+                bottom: 20px;
+                width: 70px;
+                height: 70px;
+            }
+
+            #glass-button-container:hover {
+                transform: translateX(-50%) scale(1.08);
+            }
+
+            #glass-button-container:active {
+                transform: translateX(-50%) scale(0.93);
+            }
+
+            .glass-button-text {
+                font-size: 0.65rem;
+            }
+        }
     </style>
 </head>
 
