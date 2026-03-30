@@ -1602,13 +1602,21 @@
             /* 5. ── CATEGORIES SECTION ─────────────────────────────── */
             .categories-section {
                 grid-template-columns: 1fr;
-                grid-template-rows: none;
+                grid-template-rows: repeat(4, 200px);
                 height: auto;
             }
 
             .category-card {
-                min-height: 250px;
+                min-height: 200px;
+                height: 200px;
             }
+
+            .category-video {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+
 
             /* 6. ── FOOTER ─────────────────────────────────────────── */
             .footer-container {
