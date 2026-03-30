@@ -2140,14 +2140,17 @@
 
         const videoObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
+                const video = entry.target;
                 if (entry.isIntersecting) {
-                    const p = entry.target.play && entry.target.play();
-                    if (p && p.catch) p.catch(() => { });
+                    // With preload="none", force browser to load source before playing
+                    if (video.readyState === 0) { video.load(); }
+                    const p = video.play();
+                    if (p && p.catch) p.catch(() => {});
                 } else {
-                    if (entry.target.pause) entry.target.pause();
+                    if (!video.paused) video.pause();
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.1 });
 
         videos.forEach(video => videoObserver.observe(video));
     </script>
