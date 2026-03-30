@@ -1594,8 +1594,10 @@
 
             .tools-grid {
                 grid-template-columns: repeat(4, 1fr);
+                justify-items: center;
                 gap: 1rem;
             }
+
 
             /* 5. ── CATEGORIES SECTION ─────────────────────────────── */
             .categories-section {
@@ -1924,7 +1926,7 @@
                         <img src="https://cdn.simpleicons.org/github" alt="GitHub" class="tool-icon">
                         <span class="tool-name">GitHub</span>
                     </div>
-                    <div class="tool-item">
+                    <div class="tool-item" style="grid-column: span 1;">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
                             alt="VS Code" class="tool-icon">
                         <span class="tool-name">VS Code</span>
