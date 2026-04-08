@@ -524,6 +524,251 @@
         }
 
 
+        
+        @media (max-width: 480px) {
+            .hero-section {
+                min-height: 60vh;
+                padding: 0.75rem;
+                border-radius: 0 0 28px 28px;
+            }
+
+            .hero-section::before {
+                width: min(90vw, 420px);
+                opacity: 0.25;
+                bottom: -10%;
+                height: 180%;
+            }
+
+            nav {
+                padding: 0.5rem 1rem;
+            }
+
+            .logo img {
+                height: 28px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1rem;
+                font-size: 0.95rem;
+            }
+
+            .hero-content {
+                padding: 0.6rem 0;
+                gap: 1rem;
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: clamp(2rem, 8vw, 3.6rem);
+            }
+
+            .services {
+                max-width: 100%;
+                margin: 2rem auto;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 1.25rem;
+            }
+
+            .portfolio-item {
+                min-width: 130px !important;
+                height: auto;
+                padding: 0 5px !important;
+            }
+
+            .portfolio-carousel {
+                left: 0;
+                right: 0;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                max-width: 100%;
+                padding: 1rem 0;
+            }
+
+            .categories-section {
+                height: auto !important;
+                grid-template-rows: auto;
+            }
+
+            .category-card {
+                min-height: 140px;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+            }
+
+            .footer-name {
+                font-size: clamp(2rem, 12vw, 8rem);
+                opacity: 0.04;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+                gap: 0.5rem;
+            }
+
+            .tool-icon {
+                width: 40px;
+                height: 40px;
+                display: block;
+                object-fit: contain;
+                padding: 3px;
+                box-sizing: border-box;
+            }
+
+            .tool-name {
+                font-size: 0.6rem;
+            }
+
+            .about-section {
+                margin: 1rem auto !important;
+                padding: 0 1rem;
+            }
+
+            .about-grid {
+                gap: 0.5rem !important;
+                grid-template-columns: 1fr;
+                margin-bottom: 1rem !important;
+            }
+
+            .about-description {
+                max-width: 100%;
+                margin-left: 0;
+                text-align: left;
+                font-size: 0.85rem !important;
+                line-height: 1.4 !important;
+            }
+
+            .brands-section {
+                padding: 1.5rem 0.5rem !important;
+            }
+
+            .profile-about-section {
+                margin: 2rem auto;
+                padding: 0 1rem;
+                gap: 1rem;
+            }
+
+            .tools-section {
+                margin: 1.5rem auto;
+                padding: 0 1rem;
+            }
+
+            .about-title {
+                font-size: 2.2rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .initial-part {
+                font-size: 1.1em !important;
+                letter-spacing: -1px !important;
+            }
+
+            .portfolio-part {
+                font-size: 1.2em !important;
+                top: 0.1em !important;
+                left: -0.1em !important;
+            }
+
+            .about-divider {
+                display: none;
+            }
+
+            .brands-grid {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                justify-content: space-between !important;
+                gap: 0.5rem !important;
+                align-items: center !important;
+            }
+
+            .brand-item {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+            }
+
+            .brand-logo {
+                height: auto !important;
+                max-height: 35px !important;
+                width: 100% !important;
+                max-width: 80px !important;
+                object-fit: contain !important;
+            }
+
+            .portfolio-carousel::before,
+            .portfolio-carousel::after {
+                width: 60px !important;
+            }
+
+            .portfolio-carousel::before {
+                background: linear-gradient(to right,
+                        rgba(5, 5, 5, 0.8) 0%,
+                        rgba(5, 5, 5, 0) 100%) !important;
+            }
+
+            .portfolio-carousel::after {
+                background: linear-gradient(to left,
+                        rgba(5, 5, 5, 0.8) 0%,
+                        rgba(5, 5, 5, 0) 100%) !important;
+            }
+
+            .portfolio-item img {
+                height: 220px !important;
+                width: auto !important;
+                filter: brightness(0.9);
+            }
+
+            .carousel-container {
+                animation: scroll 20s linear infinite !important;
+                gap: 12px !important;
+            }
+
+            .hero {
+                padding-top: 60px !important;
+                height: auto !important;
+                min-height: 80vh !important;
+            }
+
+            .hero-image-container {
+                height: 350px !important;
+                margin-top: -20px !important;
+                opacity: 1 !important;
+            }
+
+            .hero-image {
+                object-position: center 20% !important;
+                transform: scale(0.9) !important;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem !important;
+                max-width: 280px !important;
+                margin: 0 auto 1.5rem !important;
+            }
+
+            .hero-btn {
+                padding: 0.8rem 1.8rem !important;
+                font-size: 0.9rem !important;
+            }
+
+            .glass-popup {
+                width: 220px;
+                bottom: 100px;
+                font-size: 0.8rem;
+            }
+
+        }
+
         @keyframes particleGlow {
             0%   { filter: drop-shadow(0 0 10px rgba(0,212,255,0.3)) brightness(0.9); }
             50%  { filter: drop-shadow(0 0 25px rgba(124,58,237,0.5)) brightness(1.1); }
@@ -663,11 +908,6 @@
             backdrop-filter: none;
             transition: transform 0.6s ease;
         }
-
-        .category-card:hover {
-            transform: scale(1.02);
-        }
-
 
         .category-card:hover {
             transform: translateY(-8px) scale(1.03);
@@ -1112,335 +1352,15 @@
         }
 
         /* --- MOBILE TWEAKS (small devices) --- */
-        @media (max-width: 480px) {
-            .hero-section {
-                min-height: 70vh;
-                padding: 0.75rem;
-                border-radius: 0 0 28px 28px;
-            }
+        
 
-            .hero-section::before {
-                width: min(90vw, 420px);
-                opacity: 0.25;
-                bottom: -10%;
-                height: 180%;
-            }
+        
 
-            nav {
-                padding: 0.5rem 1rem;
-            }
+        
 
-            .logo img {
-                height: 28px;
-            }
+        
 
-            .nav-links {
-                display: none;
-            }
-
-            .cta-button {
-                padding: 0.6rem 1rem;
-                font-size: 0.95rem;
-            }
-
-            .hero-content {
-                padding: 1rem 0;
-                gap: 1rem;
-                grid-template-columns: 1fr;
-            }
-
-            .hero-text h1 {
-                font-size: clamp(2rem, 8vw, 3.6rem);
-            }
-
-            .services {
-                max-width: 100%;
-                margin: 2rem auto;
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .portfolio-item {
-                min-width: 180px;
-                height: auto;
-            }
-
-            .portfolio-carousel {
-                left: 0;
-                right: 0;
-                margin-left: 0;
-                margin-right: 0;
-                width: 100%;
-                max-width: 100%;
-            }
-
-            .categories-section {
-                height: auto !important;
-                grid-template-rows: auto;
-            }
-
-            .category-card {
-                min-height: 140px;
-                align-items: center;
-                justify-content: center;
-                padding: 1rem;
-            }
-
-            .footer-name {
-                font-size: clamp(2rem, 12vw, 8rem);
-                opacity: 0.04;
-            }
-
-            /* tighter tools grid for very small screens */
-            .tools-grid {
-                grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
-                gap: 0.5rem;
-            }
-
-            .tool-icon {
-                width: 40px;
-                height: 40px;
-                display: block;
-                object-fit: contain;
-                padding: 3px;
-                box-sizing: border-box;
-            }
-
-            .tool-name {
-                font-size: 0.6rem;
-            }
-
-            /* Reduce vertical gaps and paddings for compact mobile layout */
-            .about-section {
-                margin: 1.5rem auto;
-                padding: 0 1rem;
-            }
-
-            .about-grid {
-                gap: 1rem;
-                grid-template-columns: 1fr;
-                margin-bottom: 1.5rem;
-            }
-
-            .about-description {
-                max-width: 100%;
-                margin-left: 0;
-                text-align: left;
-                font-size: 0.78rem;
-            }
-
-            .portfolio-carousel {
-                padding: 1rem 0;
-            }
-
-            .portfolio-item {
-                min-width: 160px;
-                height: auto;
-            }
-
-            .brands-section {
-                padding: 1.5rem 1rem;
-            }
-
-            .profile-about-section {
-                margin: 2rem auto;
-                padding: 0 1rem;
-                gap: 1rem;
-            }
-
-            .tools-section {
-                margin: 1.5rem auto;
-                padding: 0 1rem;
-            }
-
-            .hero-section {
-                min-height: 60vh;
-            }
-
-            .hero-content {
-                padding: 0.6rem 0;
-            }
-
-            .services {
-                margin-top: 1.25rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* ... existing styles ... */
-
-            /* 1. Reduce the massive space around the "Initial Portfolio" heading */
-            .about-section {
-                margin: 1rem auto !important;
-                /* Reduced from 1.5rem */
-            }
-
-            .about-grid {
-                gap: 0.5rem !important;
-                /* Tighten gap between title and description */
-                margin-bottom: 1rem !important;
-            }
-
-            .about-title {
-                font-size: 2.2rem !important;
-                /* Scale down the container font-size */
-                margin-bottom: 0.5rem !important;
-            }
-
-            /* 2. Adjust the specific parts of the title to prevent overlapping/extra height */
-            .initial-part {
-                font-size: 1.1em !important;
-                letter-spacing: -1px !important;
-            }
-
-            .portfolio-part {
-                font-size: 1.2em !important;
-                top: 0.1em !important;
-                /* Pull the script font closer to the baseline */
-                left: -0.1em !important;
-            }
-
-            /* 3. Remove the divider completely on mobile to save vertical space */
-            .about-divider {
-                display: none;
-            }
-
-            /* 4. Tighten the description text */
-            .about-description {
-                font-size: 0.85rem !important;
-                line-height: 1.4 !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* ... existing mobile styles ... */
-
-            .brands-section {
-                padding: 1.5rem 0.5rem !important;
-                /* Reduce side padding to give logos more room */
-            }
-
-            .brands-grid {
-                display: flex !important;
-                flex-wrap: nowrap !important;
-                /* Force all items onto one line */
-                justify-content: space-between !important;
-                gap: 0.5rem !important;
-                /* Minimal gap to prevent touching */
-                align-items: center !important;
-            }
-
-            .brand-item {
-                flex: 1;
-                /* Ensure each item takes up equal space */
-                display: flex;
-                justify-content: center;
-            }
-
-            .brand-logo {
-                height: auto !important;
-                /* Allow height to scale proportionally */
-                max-height: 35px !important;
-                /* Cap the height so they fit vertically */
-                width: 100% !important;
-                /* Let them fill the flex container width */
-                max-width: 80px !important;
-                /* Prevent any single logo from becoming too large */
-                object-fit: contain !important;
-                /* Ensure logos aren't distorted */
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* ... your other mobile styles ... */
-
-            /* 1. Decrease the side blur power (Edge Fades) */
-            .portfolio-carousel::before,
-            .portfolio-carousel::after {
-                width: 60px !important;
-                /* Reduced from 140px */
-            }
-
-            .portfolio-carousel::before {
-                background: linear-gradient(to right,
-                        rgba(5, 5, 5, 0.8) 0%,
-                        rgba(5, 5, 5, 0) 100%) !important;
-            }
-
-            .portfolio-carousel::after {
-                background: linear-gradient(to left,
-                        rgba(5, 5, 5, 0.8) 0%,
-                        rgba(5, 5, 5, 0) 100%) !important;
-            }
-
-            /* 2. Decrease poster carousel size by 40% */
-            .portfolio-item {
-                min-width: 130px !important;
-                /* ~40% reduction from 220px/mobile baseline */
-                padding: 0 5px !important;
-                /* Tighten horizontal spacing */
-            }
-
-            .portfolio-item img {
-                height: 220px !important;
-                /* Scale down the height to keep aspect ratio */
-                width: auto !important;
-                filter: brightness(0.9);
-                /* Slightly boost brightness for mobile screens */
-            }
-
-            /* 3. Slow down the scroll slightly for better visibility on smaller posters */
-            .carousel-container {
-                animation: scroll 20s linear infinite !important;
-                gap: 12px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            /* 1. Decrease overall hero section size */
-            .hero {
-                padding-top: 60px !important;
-                /* Move content up to show more of the image */
-                height: auto !important;
-                min-height: 80vh !important;
-            }
-
-            /* 2. Make the picture more visible */
-            .hero-image-container {
-                height: 350px !important;
-                /* Shorter container to prevent the image from being cut off */
-                margin-top: -20px !important;
-                opacity: 1 !important;
-                /* Ensure full visibility */
-            }
-
-            .hero-image {
-                object-position: center 20% !important;
-                /* Adjusts the crop to show the face/upper body better */
-                transform: scale(0.9) !important;
-                /* Slightly shrink the image to fit the screen better */
-            }
-
-            /* 3. Decrease size of text elements */
-            .hero-content h1 {
-                font-size: 2.8rem !important;
-                /* Smaller main heading */
-                margin-bottom: 0.5rem !important;
-            }
-
-            .hero-content p {
-                font-size: 0.9rem !important;
-                /* Smaller sub-text */
-                max-width: 280px !important;
-                margin: 0 auto 1.5rem !important;
-            }
-
-            .hero-btn {
-                padding: 0.8rem 1.8rem !important;
-                /* Smaller button */
-                font-size: 0.9rem !important;
-            }
-        }
+        
 
         /* --- GLASSMORPHISM POPUP --- */
         .glass-popup {
@@ -1500,14 +1420,7 @@
             color: white;
         }
 
-        @media (max-width: 480px) {
-            .glass-popup {
-                width: 220px;
-                bottom: 100px;
-                /* Higher up to avoid overlapping your "Connect" button */
-                font-size: 0.8rem;
-            }
-        }
+        
 
         /* ============================================================
            COMPREHENSIVE MOBILE STYLES — max-width: 768px
