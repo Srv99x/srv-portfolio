@@ -391,6 +391,25 @@
             width: 100%;
             margin: 20px 0;
         }
+
+        .folder-1 .fu-label {
+            font-size: 11px;
+            font-weight: bold;
+            color: #4a4a3a;
+            margin-bottom: 10px;
+        }
+
+        .folder-1 .watch-desc {
+            font-size: 9px;
+            color: #4a4a3a;
+            line-height: 1.6;
+        }
+
+        .folder-1 .visual-studies-label {
+            font-size: 9px;
+            color: #4a4a3a;
+            margin-top: 30px;
+        }
     </style>
 </head>
 
@@ -409,8 +428,8 @@
                     MADE TO LAST.
                 </div>
                 <div class="rounded-frame">
-                    <div style="font-size: 11px; font-weight: bold; color: #4a4a3a; margin-bottom: 10px;">FU</div>
-                    <div style="font-size: 9px; color: #4a4a3a; line-height: 1.6;">
+                    <div class="fu-label">FU</div>
+                    <div class="watch-desc">
                         WATCH IS DEEPLY LOVED AND SOUGHT AFTER. FIRST OF ALL, IT'S THE BEST GIFT.
                     </div>
                 </div>
@@ -422,7 +441,7 @@
                 </div>
                 <div class="image-placeholder"></div>
                 <div class="hexagon"></div>
-                <div style="font-size: 9px; color: #4a4a3a; margin-top: 30px;">
+                <div class="visual-studies-label">
                     VISUAL STUDIES<br>TYPE · LAYOUT · SCALE
                 </div>
             </div>
@@ -483,7 +502,8 @@
         <div class="folder folder-5">
             <div class="tech-label">LARGE FORMAT · PUBLIC SPACES</div>
             <div class="icon-box">
-                <video src="videos/marketing.mp4" autoplay loop muted playsinline></video>
+                <!-- VIDEO PLACEHOLDER: replace src with actual marketing video path when available -->
+                <video autoplay loop muted playsinline></video>
             </div>
             <div class="code-block">
                 DESIGNED TO BE SEEN<br>BUILT FOR SCALE
@@ -527,16 +547,6 @@
             width: 100%;
         }
     </style>
-
-    <div class="container">
-        <div class="folder folder-1" data-speed="0.5">
-            <div class="folder-content">
-                <div class="title">PRINT EDITION</div>
-                <div class="content">...</div>
-            </div>
-        </div>
-
-    </div>
 
     <script>
         const folders = document.querySelectorAll('.folder');
